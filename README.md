@@ -19,8 +19,6 @@ A retro-styled Minesweeper game built with HTML, CSS, and JavaScript.
 - CSS3
 - JavaScript
 
-## Live Demo
-[Play the game](https://omerkalay.github.io/minesweeper-8bit/)
 
 ## License
 MIT License
