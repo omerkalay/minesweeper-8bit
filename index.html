@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Minesweeper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MINESWEEPER</h1>
+        <div class="game-info">
+            <button class="new-game-btn" onclick="startGame()">NEW GAME</button>
+            <button class="flag-btn" onclick="toggleFlagMode()">FLAG MODE</button>
+            <div class="flag-status">FLAG: OFF</div>
+        </div>
+        <div id="grid" class="grid" style="display: none;"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

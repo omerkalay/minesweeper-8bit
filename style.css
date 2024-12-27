@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    image-rendering: pixelated;
+}
+
+.container {
+    background: #000;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 4px solid #fff;
+    box-shadow: 
+        0 0 0 4px #000,
+        0 0 0 8px #fff;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-shadow: 4px 4px #000;
+    animation: blink 1s infinite;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.new-game-btn, .flag-btn {
+    background: #000;
+    color: #fff;
+    border: 4px solid #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.1s;
+    margin: 0.5rem;
+}
+
+.new-game-btn:hover, .flag-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.new-game-btn:active, .flag-btn:active {
+    transform: scale(0.95);
+}
+
+.flag-btn.active {
+    background: #fff;
+    color: #000;
+}
+
+.grid {
+    display: inline-grid;
+    gap: 4px;
+    padding: 1rem;
+    background: #000;
+    border: 4px solid #fff;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.1s;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+.cell.revealed {
+    background: #000;
+    border-style: inset;
+}
+
+.cell.mine {
+    background: #f00;
+}
+
+.cell.flagged {
+    background: #00f;
+}
+
+/* 8-bit stil sayı renkleri */
+.cell[data-neighbors="1"] { color: #0ff; }
+.cell[data-neighbors="2"] { color: #0f0; }
+.cell[data-neighbors="3"] { color: #f00; }
+.cell[data-neighbors="4"] { color: #00f; }
+.cell[data-neighbors="5"] { color: #f0f; }
+.cell[data-neighbors="6"] { color: #ff0; }
+.cell[data-neighbors="7"] { color: #fff; }
+.cell[data-neighbors="8"] { color: #888; }
+
+.flag-status {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Animasyonlar */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .cell {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 0.7rem;
+    }
+} 
