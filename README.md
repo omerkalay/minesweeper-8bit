@@ -1,5 +1,5 @@
 # 8-Bit Minesweeper
-
+++ omerkalay.com/games/minesweeper/
 A retro-styled Minesweeper game built with HTML, CSS, and JavaScript.
 
 ## Features
